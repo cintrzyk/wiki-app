@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="/static/main.css" />
+
+  <title>CS 253 Final Exam</title>
+</head>
+
+<body>
+
+  <div class="login-area">
+   	
+
+  	
+    
+    
+    {% if user %}
+  		{% block edit %}<a class="login-link" href="/_edit{{link}}">edit</a> <a class="login-link" href="/_history{{link}}">history</a> |{% endblock %}  {{user.name}} (<a class="login-link" href="/logout">logout</a>)
+    {% else %}
+      <a class="login-link" href="/login">login</a>
+      |
+      <a class="login-link" href="/signup">signup</a>
+    {% endif %}
+  </div>
+
+  <div id="content">
+  {% block content %}
+
+  {% endblock %}
+  </div>
+</body>
+
+</html>
+

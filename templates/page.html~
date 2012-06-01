@@ -1,0 +1,2 @@
+{{p.content|safe}} <span style="text-align: right;">{{p.created}}</span>
+

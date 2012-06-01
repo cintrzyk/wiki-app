@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+<p>found page: {{f}}</p>
+{{content | safe}}
+
+{% endblock %}

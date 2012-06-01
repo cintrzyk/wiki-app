@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block edit %}
+	<a class="login-link" href="/_edit{{link}}">edit</a> <a class="login-link" href="{{link}}">view</a> |
+{% endblock %}
+
+{% block content %}
+<h2>Total history pages: <b>{{ i }}</b> </h2>
+<table>
+<th>Date</th><th>Content</th><th>Action</th>
+{% for p in pages %}
+<tr><td class="td_created">{{p.created.ctime()}}</td><td class="td_content">{{p.content}}</td><td class="td_action"><a href="/{{p.name}}?ver={{p.key().id()}}">view</a> <a href="/_edit/{{p.name}}?ver={{p.key().id()}}">edit</a></td></tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

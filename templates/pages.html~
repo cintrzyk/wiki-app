@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block edit %}
+	
+{% endblock %}
+
+{% block content %}
+
+  {% for p in pages %}
+    {{ p.render() | safe }}
+    <br><hr><br>
+  {% endfor %}
+
+{% endblock %}
